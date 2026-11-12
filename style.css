@@ -1,0 +1,139 @@
+/* Page personnelle — styles.
+   Mardi : typographie, couleurs, espacements (« CSS from scratch »).
+   Jeudi : mise en page mobile first avec Flexbox ou Grid (« Layout Lab »). */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --couleur-titre: #181818;
+  --couleur-titre-principal: #f5eddc;
+  --couleur-fond: #b2653b;
+  --couleur-fond-2: #181818;
+  --couleur-texte: #f5eddc;
+
+  --couleur-highlight-1: #5c7f71;
+  --couleur-highlight-2: #ba8530;
+  --couleur-highlight-3: #802520;
+
+  --espace-1: 0.5rem;
+  --espace-2: 1rem;
+  --espace-3: 1.5rem;
+  --espace-4: 3rem;
+}
+
+@media (min-width: 48rem) {
+  #skills, #projects, #contact{
+    min-width: 30rem;
+  }
+
+  .introduction {
+    min-width: 35rem;
+  }
+
+  nav {
+  gap: var(--espace-3);}
+}
+
+
+
+#projects {
+  display: grid;
+}
+
+#skills {
+  display: grid;
+}
+
+
+body {
+  background-color: var(--couleur-fond-2);
+  color: var(--couleur-texte);
+}
+
+main {
+  margin: var(--espace-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--couleur-fond);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section,
+form {
+  margin: var(--espace-4);
+  min-width: 10rem;
+  background: var(--couleur-fond-2);
+  border: 0.2rem solid var(--couleur-texte);
+  padding: var(--espace-3);
+  background-clip: content-box;
+  box-shadow:
+    inset 0 0 0 var(--espace-1) var(--couleur-fond),
+    0 0 0 var(--espace-1) var(--couleur-fond);
+}
+
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+nav {
+  margin: var(--espace-1);
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--espace-1);
+}
+
+nav > a {
+  text-decoration: none;
+  color: var(--couleur-texte);
+}
+
+h1 {
+  color: var(--couleur-titre-principal);
+  font-size: 2rem;
+  margin-left: var(--espace-2);
+}
+
+h2 {
+  color: var(--couleur-texte);
+  margin-bottom: var(--espace-2);
+}
+
+img {
+  width: 15rem;
+  margin: var(--espace-3);
+  border: var(--espace-1) solid;
+  border-color: var(--couleur-highlight-1) var(--couleur-highlight-2)
+    var(--couleur-highlight-3);
+  border-radius: 100%;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+}
+
+/*.separator {
+  min-height: var(--espace-1);
+  background: var(--couleur-highlight-3);
+}*/
+
+footer {
+  background-color: var(--couleur-fond);
+}
