@@ -35,6 +35,10 @@
     min-width: 35rem;
   }
 
+  header {
+    flex-direction: row;
+  }
+
   nav {
   gap: var(--espace-3);}
 }
@@ -64,11 +68,12 @@ main {
 
 header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-color: var(--couleur-fond);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 section,
@@ -95,6 +100,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   gap: var(--espace-1);
+  flex-wrap: wrap;
 }
 
 nav > a {
